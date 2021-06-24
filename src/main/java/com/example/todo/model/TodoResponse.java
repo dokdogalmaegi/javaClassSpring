@@ -8,9 +8,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TodoResponse {
-    private long id;
+    private Long id;
     private String title;
-    private long order;
+    private Long order;
     private boolean completed;
     private String url;
 }

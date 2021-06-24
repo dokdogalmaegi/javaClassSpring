@@ -14,12 +14,12 @@ import javax.persistence.*;
 public class TodoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false)
     private String title;
     @Column(name = "todo-order", nullable = false)
-    private long order;
+    private Long order;
     @Column(nullable = false)
-    private boolean complete;
+    private Boolean complete;
 }
