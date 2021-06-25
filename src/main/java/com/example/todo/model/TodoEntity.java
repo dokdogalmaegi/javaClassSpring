@@ -18,7 +18,7 @@ public class TodoEntity {
     @Column(nullable = false)
     private String title;
 
-    @JoinColumn(name = "todo-order", nullable = false)
+    @Column(name = "todoorder", nullable = false)
     private Long order;
 
     @Column(nullable = false)
