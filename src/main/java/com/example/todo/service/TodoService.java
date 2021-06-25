@@ -21,9 +21,9 @@ public class TodoService {
         TodoEntity todoEntity = new TodoEntity();
         todoEntity.setTitle(request.getTitle());
         todoEntity.setOrder(request.getOrder());
-        todoEntity.setComplete(request.getCompleted());
+        todoEntity.setCompleted(request.getCompleted());
 
-        return todoEntity;
+        return this.todoRepository.save(todoEntity);
     }
 
     // todo 아이템 한개 조회
@@ -58,7 +58,7 @@ public class TodoService {
             todoEntity.setOrder(request.getOrder());
         }
         if(request.getCompleted() != null) {
-            todoEntity.setComplete(request.getCompleted());
+            todoEntity.setCompleted(request.getCompleted());
         }
 
         return this.todoRepository.save(todoEntity);
